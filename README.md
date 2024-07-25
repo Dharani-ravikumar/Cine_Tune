@@ -1,1 +1,1 @@
-**Cine Tune Using HTML. CSS , JAVASCRIPT**
+**Cine Tune Using HTML, INTERNAL CSS , INTERNAL JAVASCRIPT**

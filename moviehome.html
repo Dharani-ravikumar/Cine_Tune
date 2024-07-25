@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to movie page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+     body{
+        background-image: url(../imgage/background/movie.avif);
+        background-repeat: no-repeat;
+        background-size: cover;
+    } 
+    /*body{
+        background-color: #0f0e17;
+    }*/
+    .music-logo
+{
+    position: absolute;
+    margin-left: -30px;
+    color: gray;
+    
+}
+.play-logo
+{
+    position: absolute;
+    margin-left: -105px;
+    margin-top: 15px;
+    color: gray;
+}
+.plus-logo
+{
+    color: gray;
+}
+.logo 
+{
+    font-size: 30px;
+    font-weight: 6px;
+    font-family:cursive;
+    color: gray;
+}
+#select-option
+{
+    width: 200px;
+    height: 30px;
+    border-radius: 20px;
+    padding-left: 10px;
+    font-size: 20px;
+    margin-left: 500px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    opacity: 0.4;
+}
+#select option {
+    opacity: 0.8; /* Set opacity to 0.8 (80% opacity) */
+    background-color: white; /* Background color for options */
+    color: black; /* Text color for options */
+}
+.movie-icon
+{
+    font-size: 20px;
+    margin-left: 175px;
+    margin-top: -42px;
+    font-family: cursive;
+    color: white;
+    font-size: 30px;
+
+}
+#movie-home-1
+{
+    margin-left: 50px;
+}
+.movie-home
+{
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.5);
+    transition: transform 0.7s ease;
+}
+.movie-home:active {
+            transform: scale(1.1); 
+        }
+.button-next
+{
+    position: absolute;
+    margin-top: -75px;
+    margin-left: 720px;
+    border-radius: 10px;
+    color: white;
+    font-size: 25px;
+}
+.arrow-left
+{
+    color: gray;
+    position: absolute;
+    font-size: 25px;
+}
+p{ margin-left: 550px;
+    margin-top:-20px;
+    color: red;
+    font-weight: bold;
+}
+</style>
+<script>
+    function language()
+    {  
+        // var Phone = document.getElementById("select-option").value;
+        var choice=document.getElementById("select-option").value 
+        if(choice=="hin")
+        {
+            window.location.href="../html/movie/hindi.html";
+        }
+        else if(choice=="thamizh")
+        {
+            window.location.href="../html/movie/tamil.html";
+        }
+        else if(choice=="mala")
+        {
+            window.location.href="../html/movie/malayalam.html";
+        }
+        else{
+            
+            document.getElementById("select-1").innerHTML = "Invalid Choice";
+        }
+
+    }
+
+</script>
+
+<body>
+    
+    <div id="logo-logo">
+        <label class="logo">Cine Tunes</label>
+    <i class="fa-solid fa-plus plus-logo"></i>
+    <i class="fa-solid fa-music music-logo"></i>
+    <i class="fa-solid fa-play play-logo"></i>
+    <div class="movie-icon"><b>Movie</b></div>
+    </div>
+   
+    <select id="select-option">
+        <option><b>Select language</b></option>
+        <option value="thamizh">Tamil</option>
+        <option value="hin">Hindi</option>
+        <option value="mala">Malayalam</option>
+        <!-- <option value="">Malayalam</option> -->
+    </select><br>
+    
+    <i class="fa-solid fa-chevron-right button-next" onclick="language()"></i>
+    <p id="select-1"></p>
+    <div id="movie-home-1">
+    <a href="./homemovie/vtv.html"> <img src="../imgage/movie/home/vinnaithaandivaruvaayaa.avif" class="movie-home" width="200px"height="200px"></a>
+    <a href="./homemovie/avathar.html"><img src="../imgage/movie/home/AVATAR.jpg"class="movie-home" width="200px"height="200px"></a>
+    <a href="./homemovie/bachelor.html"><img src="../imgage/movie/home/bachelor1.jpg"class="movie-home"width="200px"height="200px"></a>
+    <a href="./homemovie/don.html"><img src="../imgage/movie/home/DON.jpg"class="movie-home"width="200px"height="200px"></a>
+
+    <!-- <img src="../imgage/movie/home/pathu-thala-.avif"class="movie-home"width="200px"height="200px"> -->
+    <a href="./homemovie/hey.html"><img src="../imgage/movie/home/heysinamika.jpg"class="movie-home"width="200px"height="200px"></a>
+    <a href="./homemovie/manjumelboys.html"><img src="../imgage/movie/home/Manjummel-Boys1-webp.jpg"class="movie-home"width="200px"height="200px"></a>
+    <a href="./homemovie/hiradhayam.html"> <img src="../imgage/movie/home/Hridayam-.jpg"class="movie-home"width="200px"height="200px"></a>
+    <a href="./homemovie/master.html"><img src="../imgage/movie/home/master.jpg"class="movie-home" width="200px"height="200px"></a>
+    <a href="./homemovie/farhana.html"><img src="../imgage/movie/home/Farhnna.jpg"class="movie-home"width="200px"height="200px"></a>
+    
+    <!-- <img src="../imgage/movie/home/ps.jpg"class="movie-home"width="200px"height="200px"> -->
+   
+   <a href="./homemovie/premalu.html"> <img src="../imgage/movie/home/premalu1.jpg"class="movie-home"width="200px"height="200px"></a>
+    <!-- <img src="../imgage/movie/home/theri.jpg"class="movie-home"width="200px"height="200px"> -->
+
+    </div>
+    <!-- <h1>--</h1> -->
+    <div>
+        <a href="./home.html">
+            
+            <i class="fa-solid fa-circle-arrow-left arrow-left"></i>
+        </a>
+        
+    </div>
+    
+</body>
+</html>

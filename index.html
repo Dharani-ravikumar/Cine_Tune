@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+            body
+{
+    background-image: url(./imgage/background/login.jpg);
+    /* background-image: url(./imgage/background/black.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.box-form-1
+{ 
+    border: 2px black solid;
+    position: absolute;
+    margin-left: 500px;
+    margin-top:150px;
+    width: 250px;
+    height: 300px;
+   
+    border-radius: 20px;
+    opacity: 0.8; 
+    background-color:white; 
+}
+.box-form-1-top
+{
+    padding-left: 30px; 
+}
+.login
+{
+    margin-left: 50px;
+    margin-bottom: 10px;
+}
+.input-1
+{ 
+    
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 190px;
+    height: 25px;
+    border-radius: 20px;
+    padding-left: 10px;
+
+}
+.login-button
+{
+    position: absolute;
+    width: 70px;
+    height: 25px;
+    padding-left: 0px;
+    padding-top: 2px;
+    border-radius: 20px;
+    margin-left: 60px;
+    margin-top: 25px;
+}
+.new-user-1
+{ 
+    position: absolute;
+    margin-top: 70px;
+    margin-left: 13px;
+    font-size: 17px;
+
+    display: inline-block;
+}
+.signup-link
+{ 
+    position: absolute;
+    margin-left: 154px;
+    margin-top:70px;
+
+}
+img
+{
+    width: 80px;
+    height: 80px;
+}
+.music-logo
+{
+    position: absolute;
+    margin-left: -30px;
+    color: white;
+    
+}
+.play-logo
+{
+    position: absolute;
+    margin-left: -105px;
+    margin-top: 15px;
+    color: white;
+}
+.plus-logo
+{
+    color: white;
+}
+.logo 
+{
+    font-size: 30px;
+    font-weight: 6px;
+    font-family:cursive;
+    color: white;
+}
+#error-message {
+    color: red;
+    text-align: center;
+}
+.forgot-link
+{
+    margin-bottom: -10px;
+}
+    </style>
+</head>
+<body>
+    <div id="logo-logo">
+        <label class="logo">Cine Tunes</label>
+        <i class="fa-solid fa-plus plus-logo"></i>
+        <i class="fa-solid fa-music music-logo"></i>
+        <i class="fa-solid fa-play play-logo"></i>
+    </div>
+    <div class="box-form-1">
+        <form id="login-form" onsubmit="return validateLogin()">
+            <div class="box-form-1-top">
+                <h1 class="login">Login</h1>
+                <table>
+                    <tr>
+                        <td><input class="input-1" type="text" id="username" placeholder="Username"></td>
+                    </tr>
+                    <tr>
+                        <td><input class="input-1" type="password" id="password" placeholder="Password"></td>
+                    </tr>
+                </table>
+                <a href="./html/fortgot.html"class="forgot-link">Forgot password?</a><br>
+                <input class="login-button" type="submit" value="Login">
+            </div>
+        </form>
+        <label class="new-user-1">Are you a new user?</label>
+        <a href="./html/sigup.html" class="signup-link">Sign up</a>
+    </div>
+    <script>
+        function validateLogin() {
+            var db = {'dharani': 'dharu@123'};
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            if (db[username] && db[username] === password) {
+                window.location.href = './html/home.html';
+                return false; // prevent form submission
+            } else {
+                alert('Invalid username or password');
+                return false; // prevent form submission
+            }
+        }
+    </script>
+</body>
+</html>

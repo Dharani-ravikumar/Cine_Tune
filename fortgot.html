@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    body{
+            background-image: url(../imgage/background/90.avif);
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+            
+        }
+    .music-logo
+{
+    position: absolute;
+    margin-left: -30px;
+    color: white;
+    
+}
+.play-logo
+{
+    position: absolute;
+    margin-left: -105px;
+    margin-top: 15px;
+    color: rgb(0, 0, 0);
+}
+.plus-logo
+{
+    color: rgb(0, 0, 0);
+}
+.logo 
+{
+    font-size: 30px;
+    font-weight: 6px;
+    font-family:cursive;
+    color: rgb(0, 0, 0);
+}
+    
+    #div-1
+    {
+        font-size: 20px;
+        margin-left: 450px;
+        margin-top: 200px;
+        border:2px black solid;
+        height: 200px;
+        width: 400px;
+        border-radius: 20px;
+        opacity: 0.7;
+        background-color: white;
+        
+    }
+    input{
+        position: absolute;
+        border-radius: 20px;
+        margin-left:50px ;
+        margin-top: 55px;
+        padding-left: 20px;
+        width: 300px;
+        height: 30px;
+    }
+    #email{
+        position: absolute;
+        margin-left: 50px;
+        font-size: 25px;
+        margin-top: 20px;
+        
+    }
+    #button
+    {
+        position: absolute;
+        width: 100px;
+        height: 30px;
+        margin-left: 140px;
+        margin-top: 90px;
+        padding-left: 10px;
+        background-color: rgb(87, 196, 87);
+        
+    }
+    h1{
+        margin-left: 180px;
+        margin-top: -35px;
+        color: gray;
+        font-style: italic;
+    }
+</style>
+<body>
+    <div id="logo-logo">
+    <label class="logo">Cine Tunes</label>
+    <i class="fa-solid fa-plus plus-logo"></i>
+    <i class="fa-solid fa-music music-logo"></i>
+    <i class="fa-solid fa-play play-logo"></i>
+    </div>
+    <h1>Forgot Password</h1>
+    <div id="div-1">
+        <label id="email"><b>Enter the E-mail</b></label>
+        <input type="text"><br>
+        <a href="./passwordOTP.html"><input type="button"value="Send OTP" id="button"></a>
+    </div> 
+</body>
+</html>

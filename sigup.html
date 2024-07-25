@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            background-color: tomato;
+        }
+        #sign-up {   
+            border: 2px black solid;
+            width: 400px;
+            height: 500px;
+            margin-left: 410px;
+            margin-top: 70px;
+            border-radius: 20px;
+            padding-left: 30px;
+            padding-top: 40px;
+            opacity: 0.8;
+            background-color: white;
+        }
+        .sign-up-input {
+            margin-bottom: 10px; 
+            border-radius: 20px;
+            padding-top: 10px;
+            width: 190px;
+            height: 15px;
+        }
+        td {
+            padding-top: 1px;
+            margin-right: 10px;
+            padding-left: 25px;
+        }
+        .sign-up-1 {
+            padding-top: 22px;
+            margin-right: 10px;
+        }      
+        h1 {
+            margin-left: 109px;
+            margin-top: -20px;
+            font-style: italic;
+        }
+        #sign-up-inside {
+            margin-top: 10px;
+            margin-left: -10px;
+        }
+        .login-button-1 {
+            width: 80px;
+            height: 30px;
+            border-radius: 20px;
+            margin-left: 65px;
+            margin-top: 32px;
+            background-color: green;
+        }
+        .login-button-2 {
+            width: 80px;
+            height: 30px;
+            border-radius: 20px;
+            margin-left: 180px;
+            margin-top: 32px;
+            background-color: red;
+        }
+        .music-logo {
+            position: absolute;
+            margin-left: -30px;
+            color: white;
+        }
+        .play-logo {
+            position: absolute;
+            margin-left: -105px;
+            margin-top: 15px;
+            color: white;
+        }
+        .plus-logo {
+            color: white;
+        }
+        .logo {
+            font-size: 30px;
+            font-weight: 6px;
+            font-family: cursive;
+            color: white;
+        }
+        
+        body {
+            background-image: url(../imgage/background/login.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #phoneresult, #emailresult, #passwordresult, #confirmresult {
+            color: red;
+        }
+        .sign-up-input {
+            border-radius: 10px;
+            width: 200px;
+            height: 20px;
+            font-size: 15px;
+            font-weight: bold;
+            
+        }
+        .sign-up-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .sign-up-label {
+            margin-left: 50px;
+            width: 150px;
+            font-weight: bold;
+        }
+        #sign-up {   
+            border: 2px black solid;
+            width: 550px;
+            height: 430px;
+            margin: 40px auto;
+            border-radius: 20px;
+            padding: 20px;
+            opacity: 0.6;
+            background-color: rgb(255, 255, 255);
+        }
+      .sign-name
+      {
+        margin-left: 200px;
+      }
+      .signup-icon
+      {
+        font-size: 30px;
+            margin-left: 175px;
+            margin-top: -36px;
+            font-style: italic;
+            color: gray;
+      }
+    </style>
+</head>
+<body>
+    <div id="logo-logo">
+        <label class="logo">Cine Tunes</label>
+        <i class="fa-solid fa-plus plus-logo"></i>
+        <i class="fa-solid fa-music music-logo"></i>
+        <i class="fa-solid fa-play play-logo"></i>
+        <div class="signup-icon"><b>Sign Up</b></div>
+    </div>
+
+    <div id="sign-up">
+        <h1 class="sign-name">Sign Up</h1>
+        <form id="signup-form">  
+            <div class="sign-up-row">
+                <label class="sign-up-label" for="firstname">Username</label>
+                <input type="text" class="sign-up-input" id="firstname">
+            </div>
+            
+            <div class="sign-up-row">
+                <label class="sign-up-label" for="mail">E-mail</label>
+                <input type="text" class="sign-up-input" id="mail">
+                <p id="emailresult"></p>
+            </div>
+            <div class="sign-up-row">
+                <label class="sign-up-label" for="phone">Phone Number</label>
+                <input type="number" class="sign-up-input" id="phone">
+                <p id="phoneresult"></p>
+            </div>
+            <div class="sign-up-row">
+                <label class="sign-up-label" type="password" for="pass">Password</label>
+                <input type="password" class="sign-up-input" id="pass">
+                <p id="passwordresult"></p>
+            </div>
+            <div class="sign-up-row">
+                <label class="sign-up-label"type="password" for="confirm">Confirm Password</label>
+                <input type="password" class="sign-up-input" id="confirm">
+                <p id="confirmresult"></p>
+            </div>
+            <div class="sign-up-row">
+                <input class="login-button-1" type="button" value="Cancel" onclick="window.location.href='../index.html'">
+                <button type="button" onclick="SignupValidation()" class="login-button-2">Sign Up</button>
+            </div>
+        </form>
+    
+ <script>
+        function SignupValidation() {
+            // Phone Number Validation
+            var Phone = document.getElementById("phone").value;
+            var PhoneFlag = false;
+            if ((Phone.length == 10) && (['6', '7', '8', '9'].includes(Phone[0]))) {
+                PhoneFlag = true;
+                document.getElementById("phoneresult").innerHTML = "";
+            } else {
+                document.getElementById("phoneresult").innerHTML = "Invalid Phone Number";
+            }
+
+            // Email Validation
+            var Email = document.getElementById("mail").value;
+            var EmailFlag = false;
+            var flag1 = true;
+            var flag2 = false;
+            for (var i = 0; i < Email.length; i++) {
+                if ((Email[i] >= 'A') && (Email[i] <= 'Z')) {
+                    flag1 = false;
+                }
+                if (Email[i] == '@') {
+                    flag2 = true;
+                }
+            }
+            if ((flag1 == true) && (flag2 == true)) {
+                EmailFlag = true;
+                document.getElementById("emailresult").innerHTML = "";
+            } else {
+                document.getElementById("emailresult").innerHTML = "Invalid Email ID";
+            }
+
+            // Password Validation
+            var Password = document.getElementById("pass").value;
+            var PasswordFlag = false;
+            var upper = 0;
+            var lower = 0;
+            var num = 0;
+            var special = 0;
+            for (var i = 0; i < Password.length; i++) {
+                if ((Password[i] >= 'A') && (Password[i] <= 'Z')) {
+                    upper++;
+                } else if ((Password[i] >= 'a') && (Password[i] <= 'z')) {
+                    lower++;
+                } else if ((Password[i] >= '0') && (Password[i] <= '9')) {
+                    num++;
+                } else {
+                    special++;
+                }
+            }
+            if ((Password.length >= 8) && (Password.length <= 16) && (upper >= 1) && (lower >= 1) && (num >= 1) && (special >= 1)) {
+                PasswordFlag = true;
+                document.getElementById("passwordresult").innerHTML = "";
+            } else {
+                document.getElementById("passwordresult").innerHTML = "Weak Password";
+            }
+
+            // Confirm Password
+            var ConfirmPassword = document.getElementById("confirm").value;
+            var ConfirmFlag = false;
+            if (Password == ConfirmPassword) {
+                ConfirmFlag = true;
+                document.getElementById("confirmresult").innerHTML = "";
+            } else {
+                document.getElementById("confirmresult").innerHTML = "Password Mismatch";
+            }
+
+            // Final Validation
+            if ((PhoneFlag == true) && (EmailFlag == true) && (PasswordFlag == true) && (ConfirmFlag == true)) {
+                window.location.href = "./otp.html";
+            }
+        }
+    </script> 
+</body>
+</html>
